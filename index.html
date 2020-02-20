@@ -1,66 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Maravilloso</title>
-    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/main.css">
 </head>
+
 <body>
     <header>
-        <h4>Juan Maravilloso</h4>
+        <div id="headerN">
+            <h4>Juan Maravilloso</h4>
+            <i class="material-icons" id="open"
+                onclick="if(document.getElementById('nav').style.getPropertyValue('display')=='none'){ document.getElementById('nav').style.setProperty('display', 'flex'); document.getElementById('headerN').style.setProperty('display', 'none');document.getElementById('hola').style.setProperty('display', 'none'); }else { document.getElementById('nav').style.setProperty('display', 'none'); document.getElementById('headerN').style.setProperty('display', 'flex');document.getElementById('hola').style.setProperty('display', 'flex'); }">
+                menu
+            </i>
+        </div>
+        <nav id="nav">
+            <h4 id = "oculto">Juan Maravilloso</h4>
+            <i class="material-icons" id="close"  onclick="if(document.getElementById('nav').style.getPropertyValue('display')=='none'){ document.getElementById('nav').style.setProperty('display', 'flex'); document.getElementById('headerN').style.setProperty('display', 'none');document.getElementById('hola').style.setProperty('display', 'none'); }else { document.getElementById('nav').style.setProperty('display', 'none'); document.getElementById('headerN').style.setProperty('display', 'flex');document.getElementById('hola').style.setProperty('display', 'flex'); }">
+                close
+                </i>
+            <a href="#sobreMi">Sobre mi</a>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="#sobreMi">Sobre mi</a>
-                </li>
-                <li>
-                    <a href="#habilidades">Habilidades</a>
-                </li>
-                <li>
-                    <a href="">Contáctame</a>
-                </li>
-            </ul>
+            <a href="#habilidades">Habilidades</a>
+
+            <a href="form.html">Contáctame</a>
+
         </nav>
     </header>
     <main>
-        <article id = hola>
+        <article id=hola>
             <h3>¡HOLA!</h3>
             <h1>Soy Juan, <br> desarrolador <br> web</h1>
 
-            <form action="" method="get">
+            <form action="form.html" method="get">
                 <button type="submit">¿HABLAMOS?</button>
             </form>
         </article>
-        <article id = sobreMi>
+        <article id=sobreMi>
             <h2>SOBRE MI</h2>
-            <p class = "roboto-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis sed rem in modi id accusantium ipsum natus tenetur quos eos nulla, dolorem ipsa? Facere numquam illum recusandae, deserunt illo ullam!</p>
-            <p class = "roboto-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore maiores veritatis dicta quisquam mollitia nulla autem saepe quos doloribus officiis aspernatur eligendi sunt consequatur vel repudiandae, minus, sed iure facere.</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Tn-2xOloSko" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </article>
-        <article id = habilidades>
-            <h2>HABILIDADES</h2>
-            <div>
-                <h3>FRONT-END DEVELOPER</h3>
-                <h5>LENGUAJES</h5>
-                <p>HTML, CSS, JavaScript</p>
-                <h5>DEV TOOLS</h5>
-                <p>Atom <br> Bootstrap <br> Github <br>Gitlab <br>Terminal <br></p>
+            <p class="roboto-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis sed rem in modi id
+                accusantium ipsum natus tenetur quos eos nulla, dolorem ipsa? Facere numquam illum recusandae, deserunt
+                illo ullam!</p>
+            <p class="roboto-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore maiores
+                veritatis dicta quisquam mollitia nulla autem saepe quos doloribus officiis aspernatur eligendi sunt
+                consequatur vel repudiandae, minus, sed iure facere.</p>
+            <div class="video-wrapper">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Tn-2xOloSko" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
             </div>
-            <div>
-                <h3>BACK-END DEVELOPER</h3>
-                <h5>LENGUAJES</h5>
-                <p>Java, Node.js, Python, PHP</p>
-                <h5>DEV TOOLS</h5>
-                <p>Angular <br> Github <br>Docker <br>XAMPP <br></p>
+        </article>
+        <article id=habilidades>
+            <h2>HABILIDADES</h2>
+            <div class="flex">
+                <div class="box">
+                    <h3 class="boxed">FRONT-END DEVELOPER</h3>
+                    <h5>LENGUAJES</h5>
+                    <p>HTML, CSS, JavaScript</p>
+                    <h5>DEV TOOLS</h5>
+                    <p>Atom <br> Bootstrap <br> Github <br>Gitlab <br>Terminal <br></p>
+                </div>
+                <div class="box">
+                    <h3 class="boxed">BACK-END DEVELOPER</h3>
+                    <h5>LENGUAJES</h5>
+                    <p>Java, Node.js, Python, PHP</p>
+                    <h5>DEV TOOLS</h5>
+                    <p>Angular <br> Github <br>Docker <br>XAMPP <br></p>
+                </div>
             </div>
         </article>
     </main>
     <footer>
         <h4>2019 JUAN MARAVILLOSO</h4>
     </footer>
-    
+
 </body>
+
 </html>

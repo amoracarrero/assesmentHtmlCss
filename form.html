@@ -4,33 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Maravilloso</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
     <header>
-        <h4>Juan Maravilloso</h4>
+        <div id="headerN">
+            <h4>Juan Maravilloso</h4>
+            <i class="material-icons"
+                onclick="if(document.getElementById('nav').style.getPropertyValue('display')=='none'){ document.getElementById('nav').style.setProperty('display', 'flex'); document.getElementById('headerN').style.setProperty('display', 'none') }else { document.getElementById('nav').style.setProperty('display', 'none'); document.getElementById('headerN').style.setProperty('display', 'flex');}">
+                menu
+            </i>
+        </div>
+        <nav id="nav">
+            <i class="material-icons" id="close"  onclick="if(document.getElementById('nav').style.getPropertyValue('display')=='none'){ document.getElementById('nav').style.setProperty('display', 'flex'); document.getElementById('headerN').style.setProperty('display', 'none') }else { document.getElementById('nav').style.setProperty('display', 'none'); document.getElementById('headerN').style.setProperty('display', 'flex');}">
+                close
+                </i>
+            <a href="index.html#sobreMi">Sobre mi</a>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="#sobreMi">Sobre mi</a>
-                </li>
-                <li>
-                    <a href="#habilidades">Habilidades</a>
-                </li>
-                <li>
-                    <a href="">Contáctame</a>
-                </li>
-            </ul>
+            <a href="index.html#habilidades">Habilidades</a>
+
+            <a href="form.html">Contáctame</a>
+
         </nav>
     </header>
     <main>
-        <article>
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+        <article id="form">
+            <h2 style="color:black;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
             <form action="" method="get">
+                <p><label for="nombre">Nombre:</label></p>
                 <input type="text" name="nombre" id="nombre">
+                <p><label for="email">Email:</label></p>
                 <input type="email" name="email" id="email">
+                <p><label for="mensaje">Mensaje:</label></p>
                 <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
-                <button type="submit"></button>
+                <button type="submit">Enviar</button>
             </form>
         </article>
     </main>

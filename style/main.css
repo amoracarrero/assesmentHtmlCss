@@ -1,12 +1,27 @@
+html, body,  header, main, footer {
+    margin: 0;
+    padding: 0;
+  }
+
+  article{
+      flex-flow: column wrap;
+      display: flex;
+      padding-top: 3em;
+      padding-bottom: 3em;
+
+  }
 
 header {
     background-color: black;
+    margin: 0;  
 }
 
 h1{
     font-family: 'Bebas Neue', cursive;
     font-size: 36px;
     text-align: center;
+    letter-spacing: 3px;
+
 }
 
 h2 {
@@ -14,26 +29,51 @@ h2 {
     color: #a2a2a2;
     text-align: center;
     font-size: 20px;
+    letter-spacing: 1.67px;
+
+}
+
+i{
+    color: #a2a2a2;
+    align-self: center;
 }
 
 h3 {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     text-align: center;
+    letter-spacing: 1px;
 }
 
 h4 {
     color: #a2a2a2;
     font-size: 14px;
     font-family: 'Bebas Neue', cursive;
+    margin: 5% 5%;
+}
+h5 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: #ffffff;
+  
+}
+
+ul{
+    list-style-type: none;
 }
 
 nav {
     background-color: #e7e7e7;
     font-family: 'Bebas Neue', cursive;
+    font-size: 18px;
+    letter-spacing: 1.93px;
     color: #1c6698;
-    text-align: center;
-    list-style: none;
+    display: none;
+    flex-flow: column wrap;
+    align-items: center;
+    padding-bottom: 3em;
 }
 p {
     font-family: 'Roboto', sans-serif;
@@ -43,27 +83,60 @@ p {
 
 #hola {
     background-color: #e7e7e7;
+    flex-flow: column wrap;
+
 }
 
 #sobreMi {
     background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #habilidades {
     background-color: #e7e7e7;
+    overflow: scroll;
+
 }
 
-#habilidades p {
-    color: black;
+#form{
+    background-color: #e7e7e7;
 }
 
 .roboto-light {
-    font-family: 'Roboto-Light', sans-serif;
+    font-family: 'Roboto 300', sans-serif;
 }
 
 .roboto-medium {
-    font-family: 'Roboto-Medium', sans-serif;
+    font-family: 'Roboto 400', sans-serif;
 
+}
+
+.box {
+    background-color: black;
+    border-radius: 3px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.5);
+    width: 208px;
+    height: 350px;
+    margin: 1em;
+    padding: 1em;
+
+}
+
+.boxed {
+    justify-content: center;
+    border: solid 1px #ffffff;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: #a2a2a2;
+    padding: 3px;
+}
+
+form{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1em 1em;
 }
 
 form button {
@@ -74,6 +147,138 @@ form button {
     text-align: center;
     color: #1c6698;
     font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
     display: block;
     margin: 0 auto;
+}
+
+form input{
+    border-radius: 3px;
+    border: solid 1px #a2a2a2;
+    width: 100%;
+    height: 40px;
+    background-color: #e7e7e7;
+
+}
+
+form textarea{
+    width: 100%;
+    height: 124px;
+    border-radius: 3px;
+    border: solid 1px #a2a2a2;
+    background-color: #e7e7e7;
+    margin-bottom: 1em;
+
+}
+
+form p{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 14px;
+    letter-spacing: 1.17px;
+    color: black;
+    align-self: flex-start;
+    text-align: unset;
+}
+
+footer{
+    background-color: black;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+
+
+}
+
+.video-wrapper {
+	width: 600px;
+    max-width: 100%;
+    flex-flow: column wrap;
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.flex {
+    display: flex;
+    flex-flow: row;
+}
+
+#headerN {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    
+}
+
+#close{
+    display: block;
+    color: black;
+    align-self: flex-end;
+    padding-bottom: 3em;
+
+}
+
+@media screen and (min-width: 500px) {
+    h4 {
+        color: #a2a2a2;
+        font-size: 14px;
+        font-family: 'Bebas Neue', cursive;
+        margin: 2% 2%;
+    }
+
+    .video-wrapper {
+        align-self: center;
+    }
+
+    .flex {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+    }
+    
+    
+
+    #open{display: none;}
+
+    #close{display: none;}
+
+    #habilidades {
+        overflow: unset;
+    }
+    #headerN {
+        display: none;
+    }
+   
+    #oculto{
+        display: flex;
+    }
+
+    nav {
+        background-color: black;
+        color: #a2a2a2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 0;
+    }
+
+
+    
+    h1 {
+        font-size: 80px;
+    }
 }
